@@ -4,6 +4,7 @@
     package="com.mask.wechathelper">
 
     <application
+        android:name="myapp"
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -20,21 +21,17 @@
         </activity>
 
         <service
-            android:name=".service.HelperService"
+            android:name=".assist.AssistsService"
             android:enabled="true"
             android:exported="true"
-            android:label="@string/service_name"
             android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
-
             <intent-filter>
                 <action android:name="android.accessibilityservice.AccessibilityService" />
             </intent-filter>
-
             <meta-data
                 android:name="android.accessibilityservice"
-                android:resource="@xml/accessibility_service_config" />
-
-        </service>
+                android:resource="@xml/assists_service" />
+        </service>>
 
     </application>
 

@@ -5,7 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.provider.Settings;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.view.accessibility.AccessibilityManager;
 import android.widget.TextView;
@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         initView();
         setListener();
+
     }
 
     @Override
@@ -44,7 +45,9 @@ public class MainActivity extends AppCompatActivity {
         btn_check.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                doCheckState();
+               // doCheckState();
+                OverManager.INSTANCE.getMainOver().show();
+
             }
         });
         btn_open_setting.setOnClickListener(new View.OnClickListener() {

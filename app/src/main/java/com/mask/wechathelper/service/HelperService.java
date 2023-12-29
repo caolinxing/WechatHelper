@@ -6,6 +6,9 @@ import android.util.Log;
 import android.view.accessibility.AccessibilityEvent;
 import android.view.accessibility.AccessibilityNodeInfo;
 
+
+import com.mask.wechathelper.assist.ui.UIOperate;
+
 import java.util.List;
 
 /**
@@ -14,7 +17,7 @@ import java.util.List;
  */
 public class HelperService extends AccessibilityService {
 
-    public static final String TAG = HelperService.class.toString();
+    public static final String TAG = "c";
 
     private static final long WAIT_TIME = 200;// 操作间隔时间
 
@@ -35,13 +38,7 @@ public class HelperService extends AccessibilityService {
         String className = event.getClassName().toString();
         Log.d(TAG, event.toString());
         switch (eventType) {
-            case AccessibilityEvent.TYPE_WINDOW_STATE_CHANGED:
-//                if ("com.tencent.mm.ui.widget.a.c".equals(className)) {// Dialog
-//                    dialogClick();
-//                }
-//                if ("com.tencent.mm.ui.base.p".equals(className)) {// Dialog
-//                    dialogClick();
-//                }
+            case 32:
                 dialogClick();
 
                 switch (className) {
